@@ -5,10 +5,13 @@ var app = express();
 var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 app.set('views','./src/views');
-app.set('view engine', '');
+app.set('view engine', 'ejs');
 
 app.get('/',function(request, response){
-    response.send('hello world');
+    response.render('index', {
+        title: 'Hello World',
+        list: ['Pizza', 'Cake', 'Bread']
+    });
 });
 
 app.get('/hot',function(request, response){
