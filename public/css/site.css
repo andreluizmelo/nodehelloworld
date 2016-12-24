@@ -23,7 +23,7 @@
 .parallax.parallax-right .parallax-caption {
   position: relative;
   top: 35%;
-  padding-right: 25px;
+  padding-right: 10%;
 }
 .parallax.parallax-left {
   text-align: left;
@@ -31,7 +31,7 @@
 .parallax.parallax-left .parallax-caption {
   position: relative;
   top: 35%;
-  padding-left: 25px;
+  padding-left: 10%;
 }
 .nice-phrase {
   color: #85a5a5;
