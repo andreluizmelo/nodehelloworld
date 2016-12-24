@@ -22,6 +22,10 @@ app.get('/hot',function(request, response){
     response.send('hello world, damn its hot');
 });
 
+app.get('/natal',function(request, response){
+    response.render('natal', {title: 'Natal'});
+});
+
 app.listen(port, function(err) {
     console.log('Running on port ' + port);
 });

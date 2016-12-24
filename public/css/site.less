@@ -1,12 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@red: #ea2222;
+@light-gray: #85a5a5;
+.cursive{
+    font-family: 'Kaushan Script', cursive;
+}
+
 .navbar{
     margin-bottom: 0;
 }
 
 .jumbotron {
     background-color: #454545;
-    color: white;
     padding-left: 10%;
-    h1{
-        font-size: 8em;
+    margin: 0px;
+}
+
+.parallax{
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &.parallax-right{
+        text-align: right;
+        .parallax-caption{
+            // padding-top: 15px;
+            // margin-bottom: 10px;
+            // margin-right: 25px;
+            position: relative;
+            top: 35%;
+            padding-right: 25px;
+        }
+    }
+    &.parallax-left{
+        text-align: left;
+        .parallax-caption{
+            // padding-top: 15px;
+            // margin-bottom: 10px;
+            // margin-right: 25px;
+            position: relative;
+            top: 35%;
+            padding-left: 25px;
+        }
     }
 }
+
+.nice-phrase{
+    color: @light-gray;
+    &.red{
+        color: @red;
+    }
+    
+    font-size: 5em;
+    &.nice-phrase-small{
+        font-size: 3.5em;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+}
+
