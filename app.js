@@ -5,7 +5,11 @@ var app = express();
 var port = process.env.PORT || 80;
 app.use(express.static('public'));
 app.set('views','./src/views');
-app.set('view engine', 'ejs');
+
+var handlebars = require('express-handlebars');
+app.engine('.hbs', handlebars({extname: '.hbs'}));
+
+app.set('view engine', 'hbs');
 
 app.get('/',function(request, response){
     response.render('index', {

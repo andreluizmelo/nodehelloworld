@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="charset" content="utf-8">
-    <title><%=title%></title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <!-- bower:css -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -27,9 +27,9 @@
         Ipsum lorem etc
     </div>
     <div>
-        <% for(let i = 0; i < list.length; i++){%>
-            <button class='btn btn-primary' onclick="alert('<%=list[i]%>');">Press me!</button>
-        <%}%>
+        {{#each list}}
+            <button class='btn btn-primary' onclick="alert('{{this}}');">Press me!</button>
+        {{/each}}
     </div>
 </body>    
 </html>
